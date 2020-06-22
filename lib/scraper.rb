@@ -31,7 +31,8 @@ class Scraper
       else student[:blog] = social.css("a").attribute("href").value
     end
   end
-  stud
+  student[:profile_quote] = doc.css(".profile-quote").text
+  student[:bio] = doc.css("")
   end
 
 end
