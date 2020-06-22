@@ -23,7 +23,7 @@ class Scraper
     student_hash = {}
     doc.css(".social-icon-container").each do |social|
       if social.css("a").attribute("href").value.include?("linkedin")
-        student[:linkedin] = 
+        student[:linkedin] = social.css("a").attribute("href").value
     
     
   end
