@@ -9,8 +9,8 @@ class Scraper
     
     doc.css(".student-card").each do |student|
       new_hash = {
-        :name => student.css(".student-name").text,
-        :location => student.css(".student-location").text,
+        :name => student.css("h4").text,
+        :location => student.css("p").text,
         :profile_url => student["href"]
       }
       student_arr << new_hash
