@@ -11,7 +11,7 @@ class Scraper
       new_hash = {
         :name => student.css(".student-name").text,
         :location => student.css(".student-location").text ,
-        :profile_url => student.css("a").href
+        :profile_url => student.css("a")["href"]
       }
       student_arr << new_hash
     end
