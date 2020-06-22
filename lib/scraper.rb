@@ -28,6 +28,7 @@ class Scraper
       student[:twitter] = social.css("a").attribute("href").value
       elsif social.css("a").attribute("href").value.include?("github")
       student[:github] = social.css("a").attribute("href").value
+      else student[:blog] = social.css("a").attribute("href").value
     
   end
 
