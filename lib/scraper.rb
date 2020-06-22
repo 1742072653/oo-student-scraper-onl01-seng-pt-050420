@@ -29,8 +29,8 @@ class Scraper
       elsif social.css("a").attribute("href").value.include?("github")
       student[:github] = social.css("a").attribute("href").value
       else student[:blog] = social.css("a").attribute("href").value
+      end
     end
-  end
   student[:profile_quote] = doc.css(".profile-quote").text
   student[:bio] = doc.css(".description-holder").css("p").text
   student
