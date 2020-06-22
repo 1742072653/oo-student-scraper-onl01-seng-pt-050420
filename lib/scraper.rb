@@ -31,7 +31,7 @@ class Scraper
       else student[:blog] = social.css("a").attribute("href").value
     end
   end
-  
+  stud
   end
 
 end
